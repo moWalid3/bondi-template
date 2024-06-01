@@ -1,0 +1,239 @@
+:root {
+  --main-color: #19283f;
+  --alt-color: #33d1cc;
+  --yellow-color: #ffc400;
+  --red-color: #ff3150;
+  --section-color: #eff7fa;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.main-btn {
+  background-color: var(--red-color);
+  padding: 0.5rem 1rem;
+  color: white;
+  &:hover {
+    background-color: #ee2f4b;
+    color: white;
+  }
+  &:active {
+    background-color: var(--red-color) !important;
+    color: white !important;
+    box-shadow: none;
+  }
+}
+.main-title {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1.25rem;
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    height: 2px;
+    background-color: var(--alt-color);
+  }
+}
+
+.navbar {
+  background-color: var(--main-color);
+  .navbar-toggler {
+    color: white;
+    border-color: white;
+    font-size: 25px;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: white;
+        &.active,
+        &:focus,
+        &:hover {
+          color: var(--alt-color);
+        }
+      }
+    }
+  }
+  .search {
+    border-left: 1px solid var(--alt-color);
+    svg {
+      color: var(--alt-color);
+    }
+  }
+  a.special {
+    color: white;
+    &:active {
+      background-color: var(--red-color);
+    }
+  }
+}
+.landing {
+  background-color: var(--main-color);
+  min-height: calc(100vh - 72px);
+}
+.features {
+  .feat {
+    .icon-holder {
+      height: 200px;
+
+      .number,
+      .icon {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .number {
+        color: var(--section-color);
+        font-size: 12rem;
+      }
+      .icon {
+        color: var(--alt-color);
+      }
+    }
+  }
+  h4 {
+    color: var(--yellow-color);
+  }
+}
+.our-work {
+  background-color: var(--section-color);
+  .category {
+    li {
+      transition: 0.2s;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      &:not(.active):hover {
+        color: var(--red-color);
+      }
+    }
+    .active {
+      background-color: var(--red-color);
+      border-radius: 50rem;
+      color: white;
+    }
+  }
+  .parent {
+    min-height: 321.27px;
+  }
+  .parent picture {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    &.hidden {
+      display: none;
+    }
+    &:hover::before {
+      width: 100%;
+      z-index: 1;
+    }
+    &::before {
+      content: "Application";
+      position: absolute;
+      height: 100%;
+      width: 0;
+      top: 0;
+      left: 0;
+      background-color: rgb(51, 209, 204, 0.8);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: 0.3s;
+      z-index: -1;
+    }
+  }
+  .parent > div {
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+}
+.about {
+  .about-info {
+    max-width: 500px;
+  }
+}
+.team {
+  background-color: var(--section-color);
+  .title {
+    color: var(--yellow-color);
+  }
+  .card h5 {
+    background-color: var(--alt-color);
+  }
+}
+.project {
+  background-color: var(--main-color);
+}
+.subscribe {
+  background-color: var(--yellow-color);
+  input {
+    &::placeholder {
+      color: white !important;
+    }
+  }
+  input[type="submit"] {
+    background-color: var(--main-color);
+    color: var(--yellow-color);
+    &:active {
+      background-color: var(--main-color) !important;
+      color: var(--yellow-color) !important;
+    }
+  }
+}
+footer {
+  background-color: var(--main-color);
+  .copyright {
+    span {
+      font-weight: bold;
+    }
+    p:first-child {
+      span {
+        color: var(--alt-color);
+      }
+    }
+    p:last-child {
+      span {
+        color: var(--yellow-color);
+      }
+    }
+  }
+  ul {
+    a {
+      transition: 0.3s;
+      &:hover {
+        color: var(--alt-color);
+      }
+    }
+  }
+  .social {
+    > div {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:nth-child(1) {
+        background-color: #1877f2;
+      }
+      &:nth-child(2) {
+        background-color: #000000;
+      }
+      &:nth-child(3) {
+        background-color: #0b69c7;
+      }
+      &:nth-child(4) {
+        background-color: #f20000;
+      }
+    }
+  }
+}
